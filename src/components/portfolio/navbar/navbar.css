@@ -1,0 +1,79 @@
+/* Navigation */
+.portfolio-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  border-bottom: 1px solid hsl(var(--border));
+  background: hsl(var(--background) / 0.95);
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  height: 3.5rem;
+  align-items: center;
+}
+
+.nav-brand {
+  margin-right: 1rem;
+  display: flex;
+}
+
+.brand-link {
+  margin-right: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: hsl(var(--foreground));
+}
+
+.brand-text {
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.nav-content {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .nav-content {
+    justify-content: flex-end;
+  }
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.nav-link {
+  background: none;
+  border: none;
+  color: hsl(var(--foreground));
+  font: inherit;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  transition: all 0.2s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: hsl(var(--foreground) / 0.8);
+  transform: scale(1.05);
+}
