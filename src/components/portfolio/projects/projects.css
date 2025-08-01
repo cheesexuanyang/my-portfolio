@@ -1,0 +1,131 @@
+.projects-section {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 10rem 15rem;
+  border-top: 1px solid hsl(var(--border));
+}
+
+.projects-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.section-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.section-subtitle {
+  color: hsl(var(--muted-foreground));
+  max-width: 1000px;
+  margin: 0 auto;
+  font-size: 1.15rem;
+}
+
+.projects-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.project-card {
+  overflow: hidden;
+  height: 100%;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.project-card:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border-color: hsl(var(--primary) / 0.2);
+}
+
+[data-theme="dark"] .project-card:hover {
+  box-shadow: 0 25px 50px -12px rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .project-card {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7), 0 1.5px 4px 0 rgba(255,255,255,0.05);
+  border-color: hsl(var(--primary) / 0.2);
+}
+
+.project-image {
+  aspect-ratio: 16 / 9;
+  position: relative;
+  overflow: hidden;
+  background: hsl(var(--muted));
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+}
+
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card {
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.project-img:hover {
+  transform: scale(1.1);
+}
+
+.project-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.project-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+}
+
+.project-links {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.project-description {
+  color: hsl(var(--muted-foreground));
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-badge {
+  font-size: 0.75rem;
+  transition: all 0.3s ease;
+  transform: translateZ(0);
+}
+
+.tech-badge:hover {
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
