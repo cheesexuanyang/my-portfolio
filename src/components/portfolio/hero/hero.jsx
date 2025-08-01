@@ -59,15 +59,15 @@ const Hero = () => {
           </button>
           <button onClick={handleDownload} className="btn btn-secondary">
             <DownloadIcon />
-            Download Resume
+             Download Resume
           </button>
         </div>
         
         <div className="hero-social">
-          <a href="https://github.com" className="btn btn-ghost btn-icon" aria-label="GitHub">
+          <a href="https://github.com/cheesexuanyang" className="btn btn-ghost btn-icon" aria-label="GitHub">
             <GithubIcon />
           </a>
-          <a href="https://linkedin.com" className="btn btn-ghost btn-icon" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/in/cheexuanyang/" className="btn btn-ghost btn-icon" aria-label="LinkedIn">
             <LinkedinIcon />
           </a>
           <a href="https://twitter.com" className="btn btn-ghost btn-icon" aria-label="Twitter">
