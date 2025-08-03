@@ -1,4 +1,3 @@
-// src/components/Projects/Projects.jsx
 import React from 'react';
 import './Projects.css';
 import { ExternalLinkIcon, GithubIcon } from '../../utils/icon.jsx';
