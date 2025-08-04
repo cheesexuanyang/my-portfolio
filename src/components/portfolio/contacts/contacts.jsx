@@ -4,10 +4,10 @@ import Button from '../../utils/button.jsx';
 import { LinkedinIcon, MailIcon } from '../../utils/icon.jsx'; 
 
 const contactInfo = {
-  title: "Contact Me",
-  subtitle: "Feel free to reach out via email or connect on LinkedIn.",
-  email: "cheexuanyang@email.com",
-  linkedin: "https://linkedin.com/in/cheexuanyang"
+  title: "Let's Work Together",
+  subtitle: "I'm always interested in new opportunities and exciting projects. Feel free to reach out if you'd like to collaborate!",
+  email: "cheexuanyang@gmail.com",
+  linkedin: "https://www.linkedin.com/in/cheexuanyang/"
 };
 
 const Contact = () => {
@@ -25,9 +25,10 @@ const Contact = () => {
             size="lg" 
             href={`mailto:${contactInfo.email}`}
             className="contact-btn"
+            variant="default"
           >
-            <MailIcon className="mr-2" />
-            Send Email
+            <MailIcon />
+            <span style={{ marginLeft: '0.5rem' }}>Send Email</span>
           </Button>
           <Button 
             variant="outline" 
@@ -37,8 +38,8 @@ const Contact = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <LinkedinIcon className="mr-2" />
-            Connect on LinkedIn
+            <LinkedinIcon />
+            <span style={{ marginLeft: '0.5rem' }}>Connect on LinkedIn</span>
           </Button>
         </div>
       </div>

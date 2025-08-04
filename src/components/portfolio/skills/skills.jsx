@@ -7,7 +7,6 @@ const skills = [
   "MongoDB", "PostgreSQL", "Express", "Tailwind", "Redux", "Git"
 ];
 
-// Simple Badge component (if you don't have one)
 const Badge = ({ children, className }) => (
   <span className={className}>{children}</span>
 );
