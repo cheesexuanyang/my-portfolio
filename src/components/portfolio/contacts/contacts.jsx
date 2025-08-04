@@ -1,5 +1,14 @@
 import React from 'react';
 import './Contacts.css';
+import Button from '../../utils/button.jsx';
+import { LinkedinIcon, MailIcon } from '../../utils/icon.jsx'; 
+
+const contactInfo = {
+  title: "Contact Me",
+  subtitle: "Feel free to reach out via email or connect on LinkedIn.",
+  email: "cheexuanyang@email.com",
+  linkedin: "https://linkedin.com/in/cheexuanyang"
+};
 
 const Contact = () => {
   return (
@@ -17,7 +26,7 @@ const Contact = () => {
             href={`mailto:${contactInfo.email}`}
             className="contact-btn"
           >
-            <Icons.Mail className="mr-2" />
+            <MailIcon className="mr-2" />
             Send Email
           </Button>
           <Button 
@@ -28,7 +37,7 @@ const Contact = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Icons.Linkedin className="mr-2" />
+            <LinkedinIcon className="mr-2" />
             Connect on LinkedIn
           </Button>
         </div>

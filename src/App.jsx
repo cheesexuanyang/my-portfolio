@@ -25,6 +25,12 @@ function App() {
       <section className="skills">
         <Skills />
       </section>
+      <section className="contact">
+        <Contact />
+      </section>
+      <footer className="footer">
+        <p>&copy; {new Date().getFullYear()} Your Name. All rights reserved.</p>
+      </footer> 
     </div>
   );
 }
