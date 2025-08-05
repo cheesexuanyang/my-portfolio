@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css';
-import { GithubIcon, LinkedinIcon, TwitterIcon } from '../utils/icon.jsx';
+import { GithubIcon, LinkedinIcon, TwitterIcon } from '../../utils/icon.jsx';
 
 const Footer = () => {
   const scrollToSection = (sectionId) => {
