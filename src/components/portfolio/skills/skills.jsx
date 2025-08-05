@@ -16,10 +16,10 @@ const Skills = () => {
     <motion.section 
       id="skills" 
       className="skills-section" 
-      initial={{ opacity: 0, y: 50 }} 
+      initial={{ opacity: 0, y: 100 }} 
       whileInView={{ opacity: 1, y: 0 }} 
       viewport={{ once: true }} 
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.6 }}
     >
       <div className="skills-content">
         <div className="section-header">
