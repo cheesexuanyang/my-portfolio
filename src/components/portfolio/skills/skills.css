@@ -49,6 +49,9 @@
   color: hsl(var(--foreground));
   border: 1px solid hsl(var(--border));
   border-radius: 9999px;
+  animation: fadeInUp 0.5s ease-out forwards;
+  opacity: 0;
+  animation-delay: calc(0.1s * var(--skill-index));
 }
 
 .skill-badge:hover {

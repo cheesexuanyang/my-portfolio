@@ -1,6 +1,7 @@
 import React from 'react';
 import './Projects.css';
 import { ExternalLinkIcon, GithubIcon } from '../../utils/icon.jsx';
+import { motion } from 'framer-motion';
 
 
 const projectsData = [
@@ -35,7 +36,14 @@ const projectsData = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="projects-section">
+    <motion.section 
+      id="projects" 
+      className="projects-section" 
+      initial={{ opacity: 0, y: 50 }} 
+      whileInView={{ opacity: 1, y: 0 }} 
+      viewport={{ once: true }} 
+      transition={{ duration: 0.5 }}
+    >
       <div className="projects-content">
         <div className="section-header">
           <h2 className="section-title">Featured Projects</h2>
@@ -46,7 +54,12 @@ const Projects = () => {
         
         <div className="projects-grid">
           {projectsData.map((project) => (
-            <div key={project.id} className="project-card card">
+            <motion.div 
+              key={project.id} 
+              className="project-card card"
+              whileHover={{ scale: 1.05, y: -5 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            >
               <div className="project-image">
                 <img 
                   src={project.image} 
@@ -84,11 +97,11 @@ const Projects = () => {
                   </span>
                 ))}
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

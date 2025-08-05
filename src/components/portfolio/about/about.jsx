@@ -1,9 +1,17 @@
 import React from 'react';
 import './About.css';
+import { motion } from 'framer-motion';
 
 const About = () => {
   return (
-    <section id="about" className="about-section">
+    <motion.section 
+      id="about" 
+      className="about-section"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="about-content">
         <h2 className="section-title">About Me</h2>
         <p className="about-text">
@@ -17,7 +25,7 @@ const About = () => {
           power of technology to solve real-world problems and create meaningful connections.
         </p>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

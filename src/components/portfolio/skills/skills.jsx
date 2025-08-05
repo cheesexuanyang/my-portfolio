@@ -1,19 +1,26 @@
 import './Skills.css';
 import React from 'react';
+import { motion } from 'framer-motion';
 
-// Add your skills array
 const skills = [
   "React", "Node.js", "JavaScript", "TypeScript", "CSS3", "HTML5",
   "MongoDB", "PostgreSQL", "Express", "Tailwind", "Redux", "Git"
 ];
 
-const Badge = ({ children, className }) => (
-  <span className={className}>{children}</span>
+const Badge = ({ children, className, style }) => (
+  <span className={className} style={style}>{children}</span>
 );
 
 const Skills = () => {
   return (
-    <section id="skills" className="skills-section">
+    <motion.section 
+      id="skills" 
+      className="skills-section" 
+      initial={{ opacity: 0, y: 50 }} 
+      whileInView={{ opacity: 1, y: 0 }} 
+      viewport={{ once: true }} 
+      transition={{ duration: 0.5 }}
+    >
       <div className="skills-content">
         <div className="section-header">
           <h2 className="section-title">Skills & Technologies</h2>
@@ -22,14 +29,19 @@ const Skills = () => {
           </p>
         </div>
         <div className="skills-grid">
-          {skills.map((skill) => (
-            <Badge key={skill} variant="outline" className="skill-badge">
+          {skills.map((skill, index) => (
+            <Badge 
+              key={skill} 
+              variant="outline" 
+              className="skill-badge"
+              style={{ '--skill-index': index }} 
+            >
               {skill}
             </Badge>
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
