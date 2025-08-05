@@ -7,41 +7,66 @@ const skills = [
   "MongoDB", "PostgreSQL", "Express", "Tailwind", "Redux", "Git"
 ];
 
-const Badge = ({ children, className, style }) => (
-  <span className={className} style={style}>{children}</span>
-);
+const fadeInUp = {
+  initial: { 
+    y: 40, 
+    opacity: 0 
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      ease: "easeInOut"
+    }
+  }
+};
+
+const staggerContainer = {
+  animate: {
+    transition: {
+      staggerChildren: 0.08
+    }
+  }
+};
 
 const Skills = () => {
   return (
-    <motion.section 
+    <section 
       id="skills" 
       className="skills-section" 
-      initial={{ opacity: 0, y: 100 }} 
-      whileInView={{ opacity: 1, y: 0 }} 
-      viewport={{ once: true }} 
-      transition={{ duration: 0.6 }}
     >
-      <div className="skills-content">
-        <div className="section-header">
+      <motion.div 
+        className="skills-content"
+      
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={staggerContainer} 
+      >
+        <motion.div className="section-header" variants={fadeInUp}>
           <h2 className="section-title">Skills & Technologies</h2>
           <p className="section-subtitle">
             Technologies and tools I work with to bring ideas to life
           </p>
-        </div>
-        <div className="skills-grid">
-          {skills.map((skill, index) => (
-            <Badge 
+        </motion.div>
+
+        <motion.div 
+          className="skills-grid"
+          variants={staggerContainer} 
+        >
+          {skills.map((skill) => (
+            <motion.span 
               key={skill} 
-              variant="outline" 
               className="skill-badge"
-              style={{ '--skill-index': index }} 
+              variants={fadeInUp} 
             >
               {skill}
-            </Badge>
+            </motion.span>
           ))}
-        </div>
-      </div>
-    </motion.section>
+        </motion.div>
+      </motion.div>
+    </section>
   );
 };
 

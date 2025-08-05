@@ -1,30 +1,29 @@
 import React from 'react';
 import './Hero.css';
 import { motion } from 'framer-motion';
-import { MapPinIcon, MailIcon, DownloadIcon, GithubIcon, LinkedinIcon,TwitterIcon} from '../../utils/icon.jsx';
+import { MapPinIcon, MailIcon, DownloadIcon, GithubIcon, LinkedinIcon, TwitterIcon } from '../../utils/icon.jsx';
 
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2, 
-      delayChildren: 0.25,
-      duration: 0.6,
+      staggerChildren: 0.2,
+      delayChildren: 0.2,
     },
   },
 };
 
 const itemVariants = {
-  hidden: { y: 10, opacity: 0 },
-  visible: { y: 0, opacity: 1 },
+  hidden: { y: 20, opacity: 0 },
+  visible: { y: 0, opacity: 1, transition: { type: 'spring' } },
 };
 
 const Hero = () => {
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '#';
-    link.download = 'Alex_Johnson_Resume.pdf';
+    link.href = '/Chee_Xuan_Yang_Resume.pdf'; 
+    link.download = 'Chee_Xuan_Yang_Resume.pdf'; 
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -37,27 +36,27 @@ const Hero = () => {
     }
   };
 
-    return (
-    <motion.section 
-      className="hero-section"
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
-    >
-      <div className="hero-content">
+  return (
+    <section className="hero-section">
+      <motion.div 
+        className="hero-content"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
         <motion.div className="hero-intro" variants={itemVariants}>
            <img
-            img src="image.png"
+            src="image.png" 
             alt="Chee Xuan Yang"
             className="profile-image"
           />
           <div>
-            <motion.h1 className="hero-title" variants={itemVariants}>Chee Xuan Yang</motion.h1>
-            <motion.p className="hero-subtitle" variants={itemVariants}>
+            <h1 className="hero-title">Chee Xuan Yang</h1>
+            <p className="hero-subtitle">
               Full-Stack Developer passionate about creating exceptional digital experiences
-            </motion.p>
+            </p>
           </div>
-          <motion.div className="hero-info" variants={itemVariants}>
+          <div className="hero-info">
             <div className="info-item">
               <MapPinIcon />
               <span>Singapore, SG</span>
@@ -66,7 +65,7 @@ const Hero = () => {
               <MailIcon />
               <span>cheexuanyang@gmail.com</span>
             </div>
-          </motion.div>
+          </div>
         </motion.div>
         
         <motion.div className="hero-actions" variants={itemVariants}>
@@ -90,8 +89,8 @@ const Hero = () => {
             <TwitterIcon />
           </a>
         </motion.div>
-      </div>
-    </motion.section>
+      </motion.div>
+    </section>
   );
 };
 

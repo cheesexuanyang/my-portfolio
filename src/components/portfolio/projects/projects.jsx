@@ -34,6 +34,25 @@ const projectsData = [
   }
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+};
+
+
 const Projects = () => {
   return (
     <motion.section 
@@ -52,13 +71,20 @@ const Projects = () => {
           </p>
         </div>
         
-        <div className="projects-grid">
+        <motion.div 
+            className="projects-grid"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+        >
           {projectsData.map((project) => (
             <motion.div 
               key={project.id} 
               className="project-card card"
+              variants={itemVariants}
               whileHover={{ scale: 1.05, y: -5 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              transition={{ type: "spring", stiffness: 50, damping: 10 }}
             >
               <div className="project-image">
                 <img 
@@ -99,7 +125,7 @@ const Projects = () => {
               </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </motion.section>
   );
