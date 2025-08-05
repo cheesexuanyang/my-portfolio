@@ -6,6 +6,7 @@ import Projects from './components/portfolio/projects/projects.jsx';
 import Skills from './components/portfolio/skills/skills.jsx';
 import Contact from './components/portfolio/contacts/contacts.jsx';
 import ScrollToTopButton from './components/utils/tothetopbutton/tothetop.jsx';
+import Footer from './components/footer/footer.jsx';
 import './index.css';
 import './App.css';
 
@@ -28,9 +29,7 @@ function App() {
       <section className="contact">
         <Contact />
       </section>
-      <footer className="footer">
-        <p>&copy; {new Date().getFullYear()} Your Name. All rights reserved.</p>
-      </footer>
+      <Footer />
       <ScrollToTopButton /> 
     </div>
   );
