@@ -1,7 +1,7 @@
 import React from 'react';
 import './Hero.css';
 import { motion } from 'framer-motion';
-import { MapPinIcon, MailIcon, DownloadIcon, GithubIcon, LinkedinIcon, TwitterIcon } from '../../utils/icon.jsx';
+import { MapPinIcon, MailIcon, DownloadIcon, GithubIcon, LinkedinIcon, InstagramIcon } from '../../utils/icon.jsx';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -22,8 +22,8 @@ const itemVariants = {
 const Hero = () => {
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/Chee_Xuan_Yang_Resume.pdf'; 
-    link.download = 'Chee_Xuan_Yang_Resume.pdf'; 
+    link.href = '/CheeXuanYang_Resume.pdf'; 
+    link.download = 'CheeXuanYang_Resume.pdf'; 
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -53,7 +53,7 @@ const Hero = () => {
           <div>
             <h1 className="hero-title">Chee Xuan Yang</h1>
             <p className="hero-subtitle">
-              Full-Stack Developer passionate about creating exceptional digital experiences
+              A developer with a passion for creating digital solutions that make a difference. 
             </p>
           </div>
           <div className="hero-info">
@@ -85,8 +85,8 @@ const Hero = () => {
           <a href="https://www.linkedin.com/in/cheexuanyang/" className="btn btn-ghost btn-icon" aria-label="LinkedIn">
             <LinkedinIcon />
           </a>
-          <a href="https://twitter.com" className="btn btn-ghost btn-icon" aria-label="Twitter">
-            <TwitterIcon />
+          <a href="https://www.instagram.com/cheexuanyang/" className="btn btn-ghost btn-icon" aria-label="Instagram">
+            <InstagramIcon />
           </a>
         </motion.div>
       </motion.div>
