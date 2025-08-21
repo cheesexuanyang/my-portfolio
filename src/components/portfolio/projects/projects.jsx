@@ -6,31 +6,24 @@ import { motion } from 'framer-motion';
 
 const projectsData = [
   {
-    id: 1,
-    title: "E-Commerce Platform",
-    description: "A full-stack e-commerce solution built with React, Node.js, and MongoDB. Features include user authentication, payment processing, and admin dashboard.",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe", "JWT"],
-    liveUrl: "#",
-    githubUrl: "#"
-  },
-  {
     id: 2,
-    title: "Task Management App",
-    description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-    image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=250&fit=crop",
-    technologies: ["React", "Socket.io", "Express", "PostgreSQL", "Tailwind"],
-    liveUrl: "#",
-    githubUrl: "#"
+    title: "Notes Application",
+    description: "A full-stack CRUD notes application using React, Node.js/Express, and MongoDB that includes user authentication and responsive design, demonstrating modern web development fundamentals from frontend state management to backend API design and database integration",
+    image: "/notes.png",
+    imageConfig: { width: 400, height: 250, fit: 'crop' },
+    technologies: ["React", "Node.js", "Express.js", "MongoDB", "JWT", "bcryptjs"],
+    liveUrl: "xuanyang-notes.netlify.app",
+    githubUrl: "https://github.com/cheesexuanyang/notes"
   },
   {
     id: 3,
-    title: "Weather Dashboard",
-    description: "A responsive weather dashboard that provides detailed weather information, forecasts, and interactive maps using third-party APIs.",
-    image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=400&h=250&fit=crop",
-    technologies: ["Vue.js", "OpenWeather API", "Chart.js", "CSS3"],
-    liveUrl: "#",
-    githubUrl: "#"
+    title: "Whiteboard Application",
+    description: "A real-time collaborative whiteboard where multiple users can draw together simultaneously using React, Node.js, and Socket.io for live synchronization of drawing strokes, user presence, and canvas interactions",
+    image: "/whiteboard.png",
+    imageConfig: { width: 400, height: 250, fit: 'crop' },
+    technologies: ["React", "Node.js + Express", "Socket.io", "HTML5 Canvas API"],
+    liveUrl: "https://xuanyang-whiteboard.netlify.app/",
+    githubUrl: "https://github.com/cheesexuanyang/whiteboard"
   }
 ];
 
