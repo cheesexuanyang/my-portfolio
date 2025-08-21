@@ -21,7 +21,7 @@ const projectsData = [
     description: "A real-time collaborative whiteboard where multiple users can draw together simultaneously using React, Node.js, and Socket.io for live synchronization of drawing strokes, user presence, and canvas interactions",
     image: "/whiteboard.png",
     imageConfig: { width: 400, height: 250, fit: 'crop' },
-    technologies: ["React", "Node.js + Express", "Socket.io", "HTML5 Canvas API"],
+    technologies: ["React", "Node.js" , "Express.js", "Socket.io", "HTML5 Canvas API"],
     liveUrl: "https://xuanyang-whiteboard.netlify.app/",
     githubUrl: "https://github.com/cheesexuanyang/whiteboard"
   }
