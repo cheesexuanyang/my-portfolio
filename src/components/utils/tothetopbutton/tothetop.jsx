@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import './ToTheTop.css'; 
+import './tothetop.css'; 
 
 // An icon for the button
 const ArrowUpIcon = () => (

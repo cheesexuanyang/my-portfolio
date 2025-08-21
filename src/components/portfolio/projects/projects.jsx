@@ -1,5 +1,5 @@
 import React from 'react';
-import './Projects.css';
+import './projects.css';
 import { ExternalLinkIcon, GithubIcon } from '../../utils/icon.jsx';
 import { motion } from 'framer-motion';
 

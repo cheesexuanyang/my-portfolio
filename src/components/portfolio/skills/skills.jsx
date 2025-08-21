@@ -1,4 +1,4 @@
-import './Skills.css';
+import './skills.css';
 import React from 'react';
 import { motion } from 'framer-motion';
 

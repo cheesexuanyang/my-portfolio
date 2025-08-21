@@ -1,5 +1,5 @@
 import React from 'react';
-import './Contacts.css';
+import './contacts.css';
 import Button from '../../utils/button.jsx';
 import { LinkedinIcon, MailIcon } from '../../utils/icon.jsx'; 
 

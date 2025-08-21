@@ -1,5 +1,5 @@
 import React from 'react';
-import './Hero.css';
+import './hero.css';
 import { motion } from 'framer-motion';
 import { MapPinIcon, MailIcon, DownloadIcon, GithubIcon, LinkedinIcon, InstagramIcon } from '../../utils/icon.jsx';
 
