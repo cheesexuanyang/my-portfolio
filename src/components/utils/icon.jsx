@@ -67,3 +67,18 @@ export const ExternalLinkIcon = () => (
     <line x1="10" x2="21" y1="14" y2="3"/>
   </svg>
 );
+
+export const MenuIcon = () => (
+  <svg className="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <line x1="3" y1="12" x2="21" y2="12"></line>
+    <line x1="3" y1="6" x2="21" y2="6"></line>
+    <line x1="3" y1="18" x2="21" y2="18"></line>
+  </svg>
+);
+
+export const XIcon = () => (
+  <svg className="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <line x1="18" y1="6" x2="6" y2="18"></line>
+    <line x1="6" y1="6" x2="18" y2="18"></line>
+  </svg>
+);
