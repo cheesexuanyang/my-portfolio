@@ -1,8 +1,9 @@
 .projects-section {
-  max-width: 100%;
-  margin: 0 auto;
+  max-width: 1200px; 
+  margin: 0 auto; 
   padding: 6rem 1rem;
   border-top: 1px solid hsl(var(--border));
+  width: 100%; 
 }
 
 .projects-content {
@@ -28,6 +29,10 @@
 .projects-grid {
   display: grid;
   gap: 2rem;
+  justify-content: center; 
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto; 
 }
 
 @media (min-width: 768px) {
