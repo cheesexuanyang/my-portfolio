@@ -3,8 +3,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const skills = [
-  "React", "Node.js", "JavaScript", "TypeScript", "CSS3", "HTML5",
-  "MongoDB", "PostgreSQL", "Express", "Tailwind", "Redux", "Git"
+  "React", "Node.js", "JavaScript", "CSS3", "HTML5",
+  "MongoDB", "PostgreSQL", "Express", "Socket.io", "Git", "MySQL", "Machine Learning", "REST APIs", 
 ];
 
 const fadeInUp = {
