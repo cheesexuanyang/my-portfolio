@@ -12,7 +12,7 @@ const projectsData = [
     image: "/notes.png",
     imageConfig: { width: 400, height: 250, fit: 'crop' },
     technologies: ["React", "Node.js", "Express.js", "MongoDB", "JWT", "bcryptjs"],
-    liveUrl: "xuanyang-notes.netlify.app",
+    liveUrl: "https://xuanyang-notes.netlify.app",
     githubUrl: "https://github.com/cheesexuanyang/notes"
   },
   {
